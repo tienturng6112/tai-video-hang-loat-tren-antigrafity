@@ -1,0 +1,13 @@
+{
+  "url": "https://www.douyin.com/aweme/v1/web/aweme/post/?device_platform=webapp&aid=6383&channel=channel_pc_web&sec_user_id=MS4wLjABAAAAQsKgmnH7iih6NGtvCjC6eXjGLtsFMKeNLx1hqqDg1ZViKWUW4J8j8zi4eaMF0sci&max_cursor=0&locate_query=false&show_live_replay_strategy=1&need_time_list=1&time_list_query=0&whale_cut_token=&cut_version=1&count=18&publish_video_strategy_type=2&from_user_page=1&update_version_code=170400&pc_client_type=1&pc_libra_divert=Windows&support_h265=0&support_dash=1&cpu_core_num=8&version_code=290100&version_name=29.1.0&cookie_enabled=true&screen_width=1600&screen_height=1000&browser_language=en-US&browser_platform=Win32&browser_name=Chrome&browser_version=133.0.0.0&browser_online=true&engine_name=Blink&engine_version=133.0.0.0&os_name=Windows&os_version=10&device_memory=8&platform=PC&downlink=9.2&effective_type=4g&round_trip_time=0&webid=7702292843830216219&uifid=fd93a02f3f52f94d15e514b5060909b7718dbdccf5e652d020e98a2368c5c67faea9df640065e47f0d7218854fc1f857dea4437937aae1842c860eb0708d0d2076ac7d1c23504ac8a7264c985796c740d7fad9d6aae0c77dcbc810387b6d4028e97d3b901435dae4099bb123620cd76ad73f347288703f06079714d09f06c06d66f5a27a75c334e7b4a343d37a7896aa80215cd006fa91df1a835ea6a2106394&verifyFp=verify_mvueicjy_9ZsTX3kK_uXKJ_4Cqa_8tpv_N39kTa8cIjnX&fp=verify_mvueicjy_9ZsTX3kK_uXKJ_4Cqa_8tpv_N39kTa8cIjnX&msToken=6cLphgGXjdcSAVqNrr4nRDiguYIgdDbsdS0xGXJrptJYlLfvjtzLvC31TAABEOJilBR3az_x03HTyXrSgjO89oBhVfc-uIUGl8zchwGOKck9CgzmGIz-DcEKpdxm8DAWjbj4-H8YSfT74uP51Y5y27j7o3brHtvmvd4%3D&a_bogus=Ej45htXwY2RRaVMG8ObveH3UGujlNB8yRFioWHITtxzJLXUGy8NasreubxFf4uRJR8pwhC1HnEzlbEdcpsXhpK9kwmpfuZ4f5sIC986L0qiZT0isLqRzCL0i9JGa8cTqm5KWJlX61U%2Fc2Vd-hHahUB-7C%2FTN4mUpKZNjdpWGY9zhgzT9PNqKuxSdE7Fz0RIW&timestamp=1793330231&x-secsdk-web-signature=7ec34884dde427f8bd0027cf9da68e43",
+  "headers": {
+    "uifid": "fd93a02f3f52f94d15e514b5060909b7718dbdccf5e652d020e98a2368c5c67faea9df640065e47f0d7218854fc1f857dea4437937aae1842c860eb0708d0d2076ac7d1c23504ac8a7264c985796c740d7fad9d6aae0c77dcbc810387b6d4028e97d3b901435dae4099bb123620cd76ad73f347288703f06079714d09f06c06d66f5a27a75c334e7b4a343d37a7896aa80215cd006fa91df1a835ea6a2106394",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "referer": "https://www.douyin.com/user/MS4wLjABAAAAQsKgmnH7iih6NGtvCjC6eXjGLtsFMKeNLx1hqqDg1ZViKWUW4J8j8zi4eaMF0sci",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+    "accept": "application/json, text/plain, */*",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"",
+    "sec-ch-ua-mobile": "?0"
+  },
+  "method": "GET"
+}
