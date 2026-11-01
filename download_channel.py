@@ -7,7 +7,9 @@ import httpx
 
 sys.stdout.reconfigure(line_buffering=True)
 
-DOWNLOAD_DIR = r"T:\tải video hàng loạt\Downloaded\捣蛋暮暮"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.join(SCRIPT_DIR, "Downloaded")
+DOWNLOAD_DIR = os.path.join(BASE_DIR, "捣蛋暮暮")
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 HISTORY_FILE = os.path.join(DOWNLOAD_DIR, "download_history.json")
 VIDEOS_DATA_FILE = "all_channel_videos.json"

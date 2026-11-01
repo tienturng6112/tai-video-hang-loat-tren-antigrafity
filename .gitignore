@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary and downloaded files
+*.tmp
+Downloaded/
+
+# Credentials & sessions (Giữ bảo mật tài khoản)
+cookies.json
+fresh_cookies.json
+
+# Development archive
+_archive_tests/
+

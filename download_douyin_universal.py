@@ -6,9 +6,14 @@ import sys
 import httpx
 from playwright.async_api import async_playwright
 
-sys.stdout.reconfigure(line_buffering=True)
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace', line_buffering=True)
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace', line_buffering=True)
+except Exception:
+    pass
 
-BASE_DIR = r"T:\tải video hàng loạt\Downloaded"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.join(SCRIPT_DIR, "Downloaded")
 os.makedirs(BASE_DIR, exist_ok=True)
 
 def sanitize_filename(name: str) -> str:
@@ -18,7 +23,6 @@ def sanitize_filename(name: str) -> str:
 
 async def download_file(client: httpx.AsyncClient, url: str, filepath: str):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
         'Referer': 'https://www.douyin.com/'
     }
     tmp_path = filepath + ".tmp"
@@ -48,7 +52,7 @@ async def crawl_and_download(channel_url: str):
     print(f"  URL muc tieu: {channel_url}")
     print("==================================================")
 
-    cookie_file = "cookies.json"
+    cookie_file = os.path.join(SCRIPT_DIR, "cookies.json")
     cookies_payload = []
     if os.path.exists(cookie_file):
         with open(cookie_file, "r", encoding="utf-8") as f:
@@ -109,7 +113,6 @@ async def crawl_and_download(channel_url: str):
             args=['--disable-blink-features=AutomationControlled', '--no-sandbox']
         )
         context = await browser.new_context(
-            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
             viewport={'width': 1600, 'height': 1000}
         )
         if cookies_payload:
@@ -254,4 +257,3 @@ if __name__ == "__main__":
         asyncio.run(crawl_and_download(target))
     else:
         print("Chua nhap link!")
-

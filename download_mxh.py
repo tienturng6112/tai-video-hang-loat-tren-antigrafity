@@ -4,10 +4,17 @@ import subprocess
 
 sys.stdout.reconfigure(line_buffering=True)
 
-DOWNLOAD_DIR = r"T:\tải video hàng loạt\Downloaded\TikTok_Facebook"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DOWNLOAD_DIR = os.path.join(SCRIPT_DIR, "Downloaded", "TikTok_Facebook")
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
-YTDLP_EXE = r"T:\tải video hàng loạt\.venv\Scripts\yt-dlp.exe"
+venv_ytdlp = os.path.join(SCRIPT_DIR, ".venv", "Scripts", "yt-dlp.exe")
+if os.path.exists(venv_ytdlp):
+    YTDLP_EXE = venv_ytdlp
+elif shutil.which("yt-dlp"):
+    YTDLP_EXE = shutil.which("yt-dlp")
+else:
+    YTDLP_EXE = "yt-dlp"
 
 def download(url_or_file):
     print("==================================================")

@@ -1,0 +1,42 @@
+======================================================================
+         BỘ CÔNG CỤ TẢI VIDEO HÀNG LOẠT (DOUYIN / TIKTOK / FB)
+======================================================================
+
+A. KHI TẢI VỀ MÁY TÍNH MỚI (LÀM LẦN ĐẦU TIÊN):
+----------------------------------------------------------------------
+1. Đảm bảo máy tính mới đã cài Python (tải tại: https://www.python.org/downloads/)
+   *LƯU Ý QUAN TRỌNG: Lúc cài Python, nhớ tích vào ô [x] "Add python.exe to PATH".
+
+2. Nhấp đúp chuột vào file:
+   👉 [ CAI_DAT_MAY_MOI.bat ]
+   File này sẽ tự động:
+   - Tạo môi trường ảo .venv
+   - Cài đặt đầy đủ các thư viện (playwright, httpx, yt-dlp)
+   - Tải trình duyệt Chromium chuẩn của Playwright.
+   (Hoặc nếu bạn quên, chỉ cần nhấp đúp vào bất kỳ file tải nào, hệ thống cũng sẽ tự động hỏi và chạy cài đặt cho bạn).
+
+----------------------------------------------------------------------
+B. CÁC TÍNH NĂNG CHÍNH:
+----------------------------------------------------------------------
+[1] run_login.bat
+    -> Mở trình duyệt để bạn quét mã QR Douyin trên điện thoại đăng nhập.
+    -> Giúp mở khóa tải toàn bộ video kênh không bị giới hạn.
+
+[2] tai_kenh_douyin_bat_ky.bat
+    -> Tải toàn bộ video từ link một kênh Douyin bất kỳ.
+    -> 100% chất lượng gốc 1080p/4K, không dính logo watermark.
+    -> Tự động nhận diện và chỉ tải video mới (bỏ qua video đã tải).
+
+[3] tai_video_facebook_tiktok.bat
+    -> Tải video từ TikTok, Facebook Reels, YouTube.
+    -> Dán trực tiếp 1 link hoặc nhập danh sách link trong file `links.txt`.
+
+[4] run_download.bat
+    -> Tải kênh mẫu "Đảo Đan Mộ Mộ" (100 video).
+
+----------------------------------------------------------------------
+C. NƠI LƯU VIDEO:
+----------------------------------------------------------------------
+Toàn bộ video tải về nằm trong thư mục:
+   -> [ Downloaded/ ] (phân loại tự động theo tên từng kênh)
+======================================================================
