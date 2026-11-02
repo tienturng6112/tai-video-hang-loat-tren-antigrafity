@@ -15,6 +15,7 @@ Downloaded/
 # Credentials & sessions (Giữ bảo mật tài khoản)
 cookies.json
 fresh_cookies.json
+tiktok_cookies.txt
 
 # Development archive
 _archive_tests/

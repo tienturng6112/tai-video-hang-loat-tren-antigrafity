@@ -5,34 +5,32 @@
 A. KHI TẢI VỀ MÁY TÍNH MỚI (LÀM LẦN ĐẦU TIÊN):
 ----------------------------------------------------------------------
 1. Đảm bảo máy tính mới đã cài Python (tải tại: https://www.python.org/downloads/)
-   *LƯU Ý QUAN TRỌNG: Lúc cài Python, nhớ tích vào ô [x] "Add python.exe to PATH".
+   *LƯU Ý: Lúc cài Python, nhớ tích vào ô [x] "Add python.exe to PATH".
 
 2. Nhấp đúp chuột vào file:
    👉 [ CAI_DAT_MAY_MOI.bat ]
-   File này sẽ tự động:
-   - Tạo môi trường ảo .venv
-   - Cài đặt đầy đủ các thư viện (playwright, httpx, yt-dlp)
-   - Tải trình duyệt Chromium chuẩn của Playwright.
-   (Hoặc nếu bạn quên, chỉ cần nhấp đúp vào bất kỳ file tải nào, hệ thống cũng sẽ tự động hỏi và chạy cài đặt cho bạn).
+   (Tự động tạo môi trường, cài đặt toàn bộ thư viện cần thiết).
 
 ----------------------------------------------------------------------
 B. CÁC TÍNH NĂNG CHÍNH:
 ----------------------------------------------------------------------
 [1] run_login.bat
-    -> Mở trình duyệt để bạn quét mã QR Douyin trên điện thoại đăng nhập.
-    -> Giúp mở khóa tải toàn bộ video kênh không bị giới hạn.
+    -> Mở Chrome để quét mã QR đăng nhập Douyin trên điện thoại.
 
-[2] tai_kenh_douyin_bat_ky.bat
-    -> Tải toàn bộ video từ link một kênh Douyin bất kỳ.
-    -> 100% chất lượng gốc 1080p/4K, không dính logo watermark.
-    -> Tự động nhận diện và chỉ tải video mới (bỏ qua video đã tải).
+[2] run_login_tiktok.bat
+    -> Mở Chrome để đăng nhập tài khoản TikTok (mã QR / Google / SĐT).
+    -> Giúp mở khóa tải các phim ngắn Series TikTok và kênh tắt nhúng.
 
-[3] tai_video_facebook_tiktok.bat
-    -> Tải video từ TikTok, Facebook Reels, YouTube.
-    -> Dán trực tiếp 1 link hoặc nhập danh sách link trong file `links.txt`.
+[3] tai_kenh_douyin_bat_ky.bat
+    -> Tải toàn bộ video từ link một kênh Douyin bất kỳ (1080p/4K không logo).
 
-[4] run_download.bat
-    -> Tải kênh mẫu "Đảo Đan Mộ Mộ" (100 video).
+[4] tai_video_facebook_tiktok.bat
+    -> Tải video hoặc toàn bộ kênh từ TikTok, Facebook Reels, YouTube.
+    -> Có thể dán trực tiếp 1 link video hoặc nhập danh sách link trong file `links.txt`.
+
+[5] tai_tiktok_series.bat
+    -> Chuyên dụng tải TRỌN BỘ PHIM NGẮN / SERIES TIKTOK (Short Drama).
+    -> Chỉ cần dán link 1 tập bất kỳ (ví dụ tập 1), công cụ tự động quét và tải toàn bộ các tập (1080p, không logo).
 
 ----------------------------------------------------------------------
 C. NƠI LƯU VIDEO:

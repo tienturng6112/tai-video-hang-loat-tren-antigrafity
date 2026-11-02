@@ -1,47 +1,45 @@
 @echo off
 title Cai Dat Moi Truong Cho May Moi
-chcp 65001 >nul
 cd /d "%~dp0"
 cls
 echo ================================================================
-echo          TỰ ĐỘNG CÀI ĐẶT MÔI TRƯỜNG DỰ ÁN CHO MÁY MỚI
+echo          CAI DAT MOI TRUONG DU AN CHO MAY MOI
 echo ================================================================
 echo.
 
-:: 1. Kiem tra Python
 where python >nul 2>nul
 if %errorlevel% neq 0 (
-    echo [LỖI] Máy tính của bạn chưa cài Python!
-    echo Vui lòng tải và cài đặt Python từ: https://www.python.org/downloads/
-    echo LƯU Ý: Nhớ tích chọn ô [x] "Add python.exe to PATH" khi cài!
+    echo [LOI] May tinh cua ban chua cai dat Python!
+    echo Vui long cai Python tu: https://www.python.org/downloads/
+    echo LUU Y: Nho tich chon vao o [x] "Add python.exe to PATH" khi cai dat!
     echo.
     pause
-    exit /b
+    exit /b 1
 )
 
-echo [1/3] Đang khởi tạo môi trường ảo Python (.venv)...
-if not exist ".venv" (
+echo [1/3] Dang khoi tao moi truong ao (.venv)...
+if not exist ".venv\Scripts\python.exe" (
     python -m venv .venv
 ) else (
-    echo (.venv đã tồn tại, tiếp tục bước tiếp theo...)
+    echo .venv da ton tai, bo qua buoc tao.
 )
 
 echo.
-echo [2/3] Đang cài đặt các thư viện cần thiết...
+echo [2/3] Dang cai dat cac thu vien can thiet...
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 
 echo.
-echo [3/3] Đang tải trình duyệt Chromium cho Playwright...
+echo [3/3] Dang tai trinh duyet Chromium cho Playwright...
 .\.venv\Scripts\python.exe -m playwright install chromium
 
 echo.
 echo ================================================================
-echo        ĐÃ CÀI ĐẶT THÀNH CÔNG VÀ SẴN SÀNG SỬ DỤNG!
+echo        DA CAI DAT THANH CONG VA SAN SANG SU DUNG!
 echo ================================================================
 echo.
-echo Các bước sử dụng:
-echo  1. Nhấp đúp chuột vào file: run_login.bat (để quét mã QR đăng nhập)
-echo  2. Nhấp đúp chuột vào file: tai_kenh_douyin_bat_ky.bat (để tải video)
+echo Cac buoc tiep theo:
+echo  1. Nhap dup chuot: run_login.bat (quet ma QR dang nhap Douyin)
+echo  2. Nhap dup chuot: tai_kenh_douyin_bat_ky.bat (tai video Douyin)
+echo  3. Nhap dup chuot: tai_video_facebook_tiktok.bat (tai TikTok/FB)
 echo.
 pause
-
