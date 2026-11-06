@@ -1,5 +1,5 @@
 @echo off
-title Trinh Tai Video TikTok - Facebook Reels
+title Trinh Tai Video TikTok - Facebook Reels - YouTube (Ho tro tai song song)
 cd /d "%~dp0"
 cls
 
@@ -17,19 +17,25 @@ if not exist ".venv\Scripts\python.exe" (
 
 echo ================================================================
 echo       TRINH TAI VIDEO TIKTOK / FACEBOOK REELS / YOUTUBE
-echo             (Chat luong cao nhat - Khong logo)
+echo    (Chat luong cao nhat - Khong logo - TAI SONG SONG HANG LOAT)
 echo ================================================================
 echo.
-echo Ban co the:
-echo  1. Dan truc tiep 1 link video / link kenh TikTok / Reel FB
-echo  2. Hoac nhap: links.txt (neu ban co 1 danh sach nhieu link)
+echo HUONG DAN:
+echo  1. Nhan ENTER ngay: Tu dong tai toan bo link trong file 'links.txt'
+echo     (He thong se tai song song nhieu video cung luc sieu nhanh!)
+echo  2. Hoac dan truc tiep link video / link kenh
+echo  3. Hoac dan nhieu link cung luc cach nhau boi dau cach
+echo  4. Hoac nhap ten file danh sach khac (vi du: links_maki.txt)
 echo.
-set /p "TARGET_URL=Nhap link hoac file: "
+set "TARGET_URL="
+set /p "TARGET_URL=Nhap link hoac file [Nhan ENTER de chon links.txt]: "
+
 if "%TARGET_URL%"=="" (
-    echo Ban chua nhap link!
-    pause
-    exit /b
+    set "TARGET_URL=links.txt"
+    echo.
+    echo -> Da chon mac dinh: links.txt
 )
+
 echo.
 set PYTHONIOENCODING=utf-8
 set PYTHONUTF8=1
